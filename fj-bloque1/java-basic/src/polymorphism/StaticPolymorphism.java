@@ -21,6 +21,11 @@ class B extends A {
 /** Clase de ejemplo con métodos estáticos y polimorfismo */
 class StaticPolymorphism {
 
+  /**
+   * Método main
+   * 
+   * @param args Argumentos
+   */
   public static void main(String[] args) {
 
     // Es mala práctica usar métodos estáticos desde instancia, pero puede hacerse
