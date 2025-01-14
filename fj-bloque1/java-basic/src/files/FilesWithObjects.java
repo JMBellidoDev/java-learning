@@ -34,7 +34,10 @@ public class FilesWithObjects {
       }
     }
 
-    try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
+    // A partir de la versión 9 de java se puede construir fuera el objeto e incluirlo en el try con recursos
+    ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file));
+
+    try (oos) {
       for (ProgrammerObject prog : programmers) {
         oos.writeObject(prog);
       }
